@@ -546,6 +546,25 @@
         </div>
     </section>
 
+ <!-- Nossa equipe em ação -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-azul-escuro mb-8">Nossa equipe em ação</h2>
+            <div class="relative overflow-hidden rounded-lg">
+                <div id="teamCarousel" class="flex w-full transition-transform duration-700 ease-in-out">
+                    <img src="https://drive.google.com/uc?id=1-S95XkweK77PXsmxV6wacDXVB2vM22EC" alt="Equipe 1" class="w-full h-64 sm:h-80 object-cover flex-none">
+                    <img src="https://drive.google.com/uc?id=17uep9roC0h9PkSY7EvqX_0R7hX9FBZV8" alt="Equipe 2" class="w-full h-64 sm:h-80 object-cover flex-none">
+                    <img src="https://drive.google.com/uc?id=1Nen3DA7eiQAHggJi4IUiPo_yHfZvJnXo" alt="Equipe 3" class="w-full h-64 sm:h-80 object-cover flex-none">
+                    <img src="https://drive.google.com/uc?id=1PqcA4SU3cmXN7XtqvPeKVaPneusVQuZz" alt="Equipe 4" class="w-full h-64 sm:h-80 object-cover flex-none">
+                    <img src="https://drive.google.com/uc?id=1cwLz_YemleRoWTRjQ3OzMeW35hu0Oy1" alt="Equipe 5" class="w-full h-64 sm:h-80 object-cover flex-none">
+                    <img src="https://drive.google.com/uc?id=1eYV9uc37VxdUqJUWYz_Ce1nO4FUPiRl0" alt="Equipe 6" class="w-full h-64 sm:h-80 object-cover flex-none">
+                    <img src="https://drive.google.com/uc?id=1enu42gkCUs6EhL1jdH90ktYMR5kkCT0z" alt="Equipe 7" class="w-full h-64 sm:h-80 object-cover flex-none">
+                    <img src="https://drive.google.com/uc?id=1il4TDknPOMzaD4NsrzrptLQ_E7qpVTM7" alt="Equipe 8" class="w-full h-64 sm:h-80 object-cover flex-none">
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Nossos Serviços -->
     <section id="servicos" class="py-20 bg-white">
         <div class="container mx-auto px-4">
@@ -891,8 +910,8 @@
                 </div>
             </div>
         </div>
-    </section>
-
+    </section>    
+    
     <!-- Footer -->
     <footer class="bg-azul-escuro text-white py-16">
         <div class="container mx-auto px-4">
@@ -975,12 +994,13 @@
             <div class="border-t border-blue-800 pt-8">
                 <div class="text-center mb-6">
                     <button onclick="openModal()" class="bg-azul-claro text-white font-bold py-4 px-8 rounded-lg text-lg hover:bg-blue-600 transition duration-300 shadow-lg">
-                        🚀 Solicitar Visita Gratuita
+                        Solicitar Visita Gratuita
                     </button>
                 </div>
                 <div class="text-center">
                     <p class="text-blue-200 mb-1">&copy; 2025 Poços Realeza. Todos os direitos reservados.</p>
                     <p class="text-blue-300 text-sm">CNPJ 35.009.849/0001-00 | Desde 2018 perfurando com qualidade</p>
+                    <p class="text-blue-300 text-sm mt-2">Poços Realeza LTDA.</p>
                 </div>
             </div>
         </div>
@@ -1029,6 +1049,17 @@
                 }
             });
         });
+        
+        // Carrossel automático da equipe
+        const teamCarousel = document.getElementById('teamCarousel');
+        if (teamCarousel) {
+            const slides = teamCarousel.children;
+            let currentIndex = 0;
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                teamCarousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }, 3000);
+        }
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976e7cbbc1e7f1d3',t:'MTc1NjQ5NjA4MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
