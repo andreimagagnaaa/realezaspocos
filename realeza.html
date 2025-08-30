@@ -893,6 +893,25 @@
         </div>
     </section>
 
+    <!-- Equipe Carousel -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-azul-escuro text-center mb-8">Nossa equipe em ação</h2>
+            <div class="relative overflow-hidden max-w-4xl mx-auto">
+                <div id="teamCarousel" class="flex transition-transform duration-700">
+                    <img src="https://drive.google.com/uc?export=view&id=1-S95XkweK77PXsmxV6wacDXVB2vM22EC" class="w-full h-64 md:h-96 object-cover flex-shrink-0 rounded-lg" alt="Equipe 1">
+                    <img src="https://drive.google.com/uc?export=view&id=17uep9roC0h9PkSY7EvqX_0R7hX9FBZV8" class="w-full h-64 md:h-96 object-cover flex-shrink-0 rounded-lg" alt="Equipe 2">
+                    <img src="https://drive.google.com/uc?export=view&id=1Nen3DA7eiQAHggJi4IUiPo_yHfZvJnXo" class="w-full h-64 md:h-96 object-cover flex-shrink-0 rounded-lg" alt="Equipe 3">
+                    <img src="https://drive.google.com/uc?export=view&id=1PqcA4SU3cmXN7XtqvPeKVaPneusVQuZz" class="w-full h-64 md:h-96 object-cover flex-shrink-0 rounded-lg" alt="Equipe 4">
+                    <img src="https://drive.google.com/uc?export=view&id=1cwLz_YemleRoWTRjQ3OzMeW35hu0Oy1" class="w-full h-64 md:h-96 object-cover flex-shrink-0 rounded-lg" alt="Equipe 5">
+                    <img src="https://drive.google.com/uc?export=view&id=1eYV9uc37VxdUqJUWYz_Ce1nO4FUPiRl0" class="w-full h-64 md:h-96 object-cover flex-shrink-0 rounded-lg" alt="Equipe 6">
+                    <img src="https://drive.google.com/uc?export=view&id=1enu42gkCUs6EhL1jdH90ktYMR5kkCT0z" class="w-full h-64 md:h-96 object-cover flex-shrink-0 rounded-lg" alt="Equipe 7">
+                    <img src="https://drive.google.com/uc?export=view&id=1il4TDknPOMzaD4NsrzrptLQ_E7qpVTM7" class="w-full h-64 md:h-96 object-cover flex-shrink-0 rounded-lg" alt="Equipe 8">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-azul-escuro text-white py-16">
         <div class="container mx-auto px-4">
@@ -981,6 +1000,7 @@
                 <div class="text-center">
                     <p class="text-blue-200 mb-1">&copy; 2025 Poços Realeza. Todos os direitos reservados.</p>
                     <p class="text-blue-300 text-sm">CNPJ 35.009.849/0001-00 | Desde 2018 perfurando com qualidade</p>
+                    <p class="text-blue-300 text-sm">Poços Realeza LTDA.</p>
                 </div>
             </div>
         </div>
@@ -1029,6 +1049,17 @@
                 }
             });
         });
+
+        // Carousel auto loop
+        const teamCarousel = document.getElementById('teamCarousel');
+        if (teamCarousel) {
+            const totalSlides = teamCarousel.children.length;
+            let currentIndex = 0;
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                teamCarousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }, 3000);
+        }
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976e7cbbc1e7f1d3',t:'MTc1NjQ5NjA4MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
